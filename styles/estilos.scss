@@ -1,0 +1,167 @@
+            //COLORES
+:root { 
+    --Very-dark-blue-mainBG: hsl(217, 54%, 11%);
+    --Very-dark-blue-cardBG: hsl(219, 70%, 18%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+}
+            //GENERAL
+body {
+    font-family: 'Outfit', sans-serif;
+    font-size:16px;
+    background-color: var(--Very-dark-blue-mainBG); 
+    
+}
+
+.flex { 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100vh;
+    width: 100vw; 
+}
+            //TARJETA
+.card { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    background-color: var(--Very-dark-blue-cardBG);
+    width: 450px;
+    height: 700px;
+    border-radius: 20px;
+    box-shadow: 0px 50px 30px 40px rgb(6, 12, 29);
+    
+    &-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        &-container {
+            display:flex;
+            flex-direction: column;
+
+            //IMAGENES CUBO E ICONO
+            &-imgs {
+                display: flex;
+                justify-content: center;
+                margin-top: 2rem;
+                
+                    &-img {
+                        position:relative;
+                        height:25rem;
+                        cursor: pointer;            
+                        border-radius: 0.875rem;
+                        box-shadow: 0px 5px 5px 4px rgb(15, 29, 70);
+                        z-index: 1;
+                        transition: opacity 1.5s ease-in-out;
+                        &:hover { 
+                            opacity: 0.5; 
+                            }
+                    }
+                    &-icon {
+                        position:absolute;
+                        height: 25rem;
+                        border-radius:0.875rem;
+                        background-color:var(--Very-dark-blue-cardBG);
+                    }
+            }
+
+                //TITULO
+                &-tittle {
+            position: relative;
+            color: var(--White);  
+            cursor: pointer;
+            &:hover {
+                color: var(--Cyan);
+                transition: .2s all ease-in-out;
+                }         
+        }
+
+            //TEXTO
+                &-text {
+            display: flex;
+            width:  400px;
+            padding: 2.5px;    
+            margin-top: -2.5rem;
+            font-size: 1.25rem;
+            font-weight: 300;
+            color:var(--Soft-blue);
+        }
+
+            //SUBTEXTOS
+            &-subtexts {  
+                display:flex;
+                justify-content: space-between;
+                padding: 0.4rem;
+                border-bottom: 1.5px ridge var(--Soft-blue);
+                &-subtext { 
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    color: var(--Cyan);
+                    text-align: center; 
+                    font-weight: 600;
+                    width: 32%;  
+                    background: linear-gradient(180deg, var(--Very-dark-blue-cardBG) 0%, var(--Very-dark-blue-mainBG) 120%);        
+                    box-shadow: 0px 2px 3px 1px rgb(15, 29, 70);
+                    cursor: pointer;
+                    
+        }
+                &-subtext2 { 
+                    display:flex;
+                    color:var(--Soft-blue);              
+            } 
+        } 
+
+        //PIE DE TARJETA
+        &-footer { 
+            display: flex; 
+            flex-direction: column;
+            align-items:center; 
+            color:var(--Soft-blue); 
+
+            //BOTON 
+            &-btn { 
+                height:4rem;
+                font-weight: 400;
+                margin-top: 0.5rem;
+                border-radius: 1rem;;
+                background: linear-gradient(220deg, var(--Cyan) 0%, var(--Very-dark-blue-mainBG) 120%);
+                color: var(--Very-dark-blue-mainBG);
+                font-size: 2rem;
+                cursor: pointer;
+                &:hover { 
+                    color: var(--Cyan);
+                    background: linear-gradient(220deg, var(--Very-dark-blue-mainBG) 0%, var(--Cyan)  120%);
+                    transition: .5s ease-in-out;
+                }
+            }
+            
+            // CREACION DE LUCIANO MIÑO
+            &-creation {
+                display: flex;
+                justify-content: center;
+                align-items: center; 
+                    &-name {
+                        margin-left: 0.625rem;
+                        color: var(--White);
+                        cursor: pointer;
+                        text-decoration: none;
+                
+                        &:hover {
+                            color: var(--Cyan);
+                            transition: .5s all ease-in-out;
+                        }
+                    }
+                }
+            } 
+        }   
+    }   
+}
+
+@import "mobile";
+
+
+
